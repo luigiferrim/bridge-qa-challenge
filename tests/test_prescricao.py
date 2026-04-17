@@ -63,7 +63,10 @@ def test_bug_exposicao_banco_de_dados(page, prescricao_logada):
     prescricao_page.input_periodo_livre.press_sequentially("e10")
     prescricao_page.salvar_prescricao()
 
-    expect(page.locator("body")).not_to_contain_text(
-        ERRO_TECNICO_MONGOOSE,
-        timeout=3000,
-    )
+    page.wait_for_timeout(1000)
+    texto_da_pagina = page.locator("body").inner_text()
+    if ERRO_TECNICO_MONGOOSE in texto_da_pagina:
+        pytest.fail(
+            "Bug 02 reproduzido: o sistema exibiu uma mensagem tecnica do Mongoose "
+            "ao usuario no campo periodoDose."
+        )

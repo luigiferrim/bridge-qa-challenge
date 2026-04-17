@@ -21,6 +21,8 @@ Automacao de testes criada como bonus para o desafio tecnico do Laboratorio Brid
 
    Reproduz a entrada `e10` no campo de periodo da dose e verifica se o erro tecnico `Prescricao validation failed: periodoDose` nao aparece para o usuario.
 
+   Observacao: enquanto o bug estiver presente no sistema, este teste deve falhar. A falha indica que a aplicacao ainda esta exibindo uma mensagem tecnica de validacao para o usuario.
+
 ## Como executar
 
 Crie e ative o ambiente virtual:
