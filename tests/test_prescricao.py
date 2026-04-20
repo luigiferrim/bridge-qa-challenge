@@ -46,8 +46,16 @@ def test_fluxo_feliz_prescricao(prescricao_logada):
     prescricao_page.selecionar_periodo_botao()
     prescricao_page.salvar_prescricao()
 
-    expect(prescricao_page.card_receituario).to_be_visible(timeout=15000)
-    expect(prescricao_page.card_receituario).to_contain_text("Amoxicilina", timeout=15000)
+    card_amoxicilina = prescricao_page.page.locator(".card-medicamento", has_text="Amoxicilina")
+    expect(card_amoxicilina).to_be_visible(timeout=15000)
+
+    prescricao_page.clicar_ver_todas_receitas()
+    expect(prescricao_page.cards_cadastro.first).to_be_visible(timeout=10000)
+
+    cadastro_mais_recente = prescricao_page.cards_cadastro.first
+    expect(cadastro_mais_recente).to_contain_text("Luigi Ferri Maines")
+    expect(cadastro_mais_recente).to_contain_text("529.982.247-25")
+    expect(cadastro_mais_recente).to_contain_text("Amoxicilina")
 
 
 def test_bug_exposicao_banco_de_dados(page, prescricao_logada):

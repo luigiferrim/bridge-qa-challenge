@@ -15,7 +15,7 @@ Automacao de testes criada como bonus para o desafio tecnico do Laboratorio Brid
 
 1. **Caminho feliz da prescricao**
 
-   Valida o cadastro de uma prescricao com dados validos de paciente, medicamento Amoxicilina, via Oral e periodo de dose de 8h. Ao final, verifica se o receituario foi exibido e se contem o medicamento cadastrado.
+   Valida o cadastro de uma prescricao com dados validos de paciente, medicamento Amoxicilina, via Oral e periodo de dose de 8h. Apos salvar, verifica se o receituario foi exibido na tela com o medicamento correto. Em seguida, navega para a pagina de listagem ("Ver todas as receitas") e confirma que o cadastro mais recente contem o nome do paciente, o CPF e o principio ativo informados, validando a persistencia real do dado.
 
 2. **Regressao do Bug 02**
 

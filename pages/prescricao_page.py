@@ -15,6 +15,8 @@ class PrescricaoPage:
         self.btn_salvar = page.locator("button", has_text="Salvar")
         self.mensagem_erro = page.locator(".mensagem-erro")
         self.card_receituario = page.locator(".card-medicamento")
+        self.btn_ver_todas_receitas = page.locator("a[href='/visualizar/receitas']")
+        self.cards_cadastro = page.locator("div.cadastro")
 
     def acessar_sistema(self, url: str):
         self.page.goto(url)
@@ -34,3 +36,6 @@ class PrescricaoPage:
 
     def salvar_prescricao(self):
         self.btn_salvar.click()
+
+    def clicar_ver_todas_receitas(self):
+        self.btn_ver_todas_receitas.click()
