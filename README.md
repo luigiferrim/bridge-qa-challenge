@@ -4,6 +4,8 @@
 
 Automacao de testes criada como bonus para o desafio tecnico do Laboratorio Bridge. O foco dos testes esta no modulo de prescricao de medicamentos, com apoio do login apenas para acessar a area autenticada do sistema.
 
+**Resultado:** fui aprovado no processo e desde junho de 2026 trabalho como QA Automation Engineer no Laboratorio Bridge, na Jornada do Estudante (plataforma do MEC).
+
 ## Tecnologias
 
 - Python
